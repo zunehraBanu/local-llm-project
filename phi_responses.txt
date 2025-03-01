@@ -1,0 +1,24 @@
+Prompt: A shocking Chinese AI advancement called DeepSeek is sending US stocks plunging
+Response: A shocking Chinese AI advancement called DeepSeek is sending US stocks plunging.
+
+DeepSeek is a Chinese AI company that has developed a groundbreaking technology called DeepMind. DeepMind is a deep learning algorithm that can analyze vast amounts of data and make predictions with incredible accuracy. It has been used in various industries, including healthcare, finance, and transportation.
+
+The news of DeepSeek's success has caused a stir in the stock market. Many investors are worried about the potential impact
+Sentiment: Neutral
+
+Prompt: As sales slump, Kohl’s turns to a new CEO to bring back customers
+Response: As sales slump, Kohl’s turns to a new CEO to bring back customers and boost profits.
+
+Kohl’s has been struggling to keep up with the competition, and their sales have been declining steadily over the past few years. The company's CEO, John, is determined to turn things around and bring back customers. He decides to hire a new CEO, Sarah, who has a proven track record of turning around struggling companies.
+
+Sarah's first task is to
+Sentiment: Neutral
+
+Prompt: Expect record-high egg prices for most of the year
+Response: Expect record-high egg prices for most of the year.
+
+The egg industry is facing a crisis due to the ongoing pandemic. The demand for eggs has skyrocketed as people try to stock up on essential food items. However, the supply chain has been disrupted, leading to a shortage of eggs. This shortage has resulted in record-high prices for eggs, making it difficult for many families to afford them.
+
+The situation is particularly dire for low-income families who rely on
+Sentiment: Negative
+
