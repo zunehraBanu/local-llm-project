@@ -2,7 +2,7 @@
 
 """
 This script reads business news URLs from 'input.txt',
-scrapes headlines from each, and writes them to 'output.txt'.
+scrapes headlines from each, and writes them to 'output.txt'
 """
 
 from selenium import webdriver
