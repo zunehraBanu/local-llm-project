@@ -1,0 +1,12 @@
+name: business-news-web-scraper
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - requests
+  - lxml
+  - pip:
+      - selenium==4.8.0
+      - beautifulsoup4==4.11.1
+      - chromedriver-binary==112.0.5615.49
