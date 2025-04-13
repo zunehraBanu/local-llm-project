@@ -21,27 +21,41 @@ This Python program scrapes **headlines from business news websites** using Sele
 - `requirements.yml` - list of required packages
 
 ---
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- **Python 3.8** (or compatible version)
+- **Conda** (Miniconda or Anaconda)
+- A stable internet connection for the first run (to scrape websites)
 
-## 🔧 How to run it
+## Setup Instructions
 
-### 1. Clone the repo and checkout the branch
+### 1. Clone the Repository
+Open your terminal or command prompt and run:
+<code>git clone https://github.com/yourusername/your-repo-name.git</code>
 
-```bash
-git clone <your-repo-link>
-cd <repo-folder>
-git checkout -b webScraping
+Then, navigate to the project directory:
+<code>cd your-repo-name</code>
 
-### 2. 📦 Install Dependencies
-### Create and activate a virtual environment (optional but recommended), then run:
-conda env create -f requirements.yml
-conda activate business-news-web-scraper-env
+### 2. Create and Activate the Conda Environment
+Use the provided `requirements.yaml` file to set up the environment. Run:
+<code>conda env create -f requirements.yml</code>
 
-### 3. 📝 Add Input URLs
+Activate the environment:
+<code>conda activate business-news-web-scraper-env</code>
+
+### 3. (Optional) Install Additional Dependencies
+All necessary packages are specified in the `requirements.yaml`. If you need to install any additional Python packages, you can use:
+<code>pip install package_name</code>
+
+## Running the Scraper
+
+
+### 1. 📝 Add Input URLs
 ### If you want to edit - Edit the input.txt file and include one URL per line. For example:
 https://www.businesstoday.in/latest
 https://www.financialexpress.com/market/
 
-### 4. 🏃 Run the Script
+### 2. 🏃 Run the Script
 python web_scraper.py
 ### After completion, check output.txt for the scraped headlines.
-### All the best and happy scraping! 🕵️‍♀️📄
+## All the best and happy scraping! 🕵️‍♀️📄
