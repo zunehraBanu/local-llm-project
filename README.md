@@ -30,3 +30,18 @@ This Python program scrapes **headlines from business news websites** using Sele
 git clone <your-repo-link>
 cd <repo-folder>
 git checkout -b webScraping
+
+### 2. 📦 Install Dependencies
+### Create and activate a virtual environment (optional but recommended), then run:
+conda env create -f requirements.yml
+conda activate business-news-web-scraper-env
+
+### 3. 📝 Add Input URLs
+### If you want to edit - Edit the input.txt file and include one URL per line. For example:
+https://www.businesstoday.in/latest
+https://www.financialexpress.com/market/
+
+### 4. 🏃 Run the Script
+python web_scraper.py
+### After completion, check output.txt for the scraped headlines.
+### All the best and happy scraping! 🕵️‍♀️📄
