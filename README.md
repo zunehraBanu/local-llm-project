@@ -53,9 +53,10 @@ All necessary packages are specified in the `requirements.yaml`. If you need to 
 ### 1. 📝 Add Input URLs
 ### If you want to edit - Edit the input.txt file and include one URL per line. For example:
 https://www.businesstoday.in/latest
+
 https://www.financialexpress.com/market/
 
 ### 2. 🏃 Run the Script
-python web_scraper.py
+<code>python web_scraper.py</code>
 ### After completion, check output.txt for the scraped headlines.
 ## All the best and happy scraping! 🕵️‍♀️📄
