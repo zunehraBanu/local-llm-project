@@ -2,19 +2,26 @@
 
 """
 This script reads business news URLs from 'input.txt',
-scrapes headlines from each, and writes them to 'output.txt'
+scrapes headlines from each, and writes them to 'output.txt'.
 """
-
+# Selenium is used to automate browser actions like loading pages and retrieving HTML
 from selenium import webdriver
+# Options lets us configure how Chrome behaves (e.g., headless mode)
 from selenium.webdriver.chrome.options import Options
+# BeautifulSoup is a library for parsing HTML and extracting data
 from bs4 import BeautifulSoup
+# Time is used to pause the script briefly so that dynamic web content can load
 import time
 
 # --- Initialize the Selenium WebDriver in headless mode (no browser window will pop up) ---
 def init_driver():
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Run Chrome in headless mode
-    driver = webdriver.Chrome(options=chrome_options)
+    chrome_options = Options() # Create a ChromeOptions object to set browser preferences
+    chrome_options.add_argument("--headless") # Run in headless mode (no browser UI)
+    chrome_options.add_argument("--disable-gpu") # Disable GPU usage for compatibility
+    chrome_options.add_argument("--ignore-certificate-errors") # Ignore SSL certificate errors
+    chrome_options.add_argument("--allow-running-insecure-content") # Allow HTTP content on HTTPS pages
+    chrome_options.add_argument("--log-level=3")  # Suppress logs
+    driver = webdriver.Chrome(options=chrome_options) # Launch Chrome with these settings
     return driver
 
 # --- Read URLs from the input file ---
