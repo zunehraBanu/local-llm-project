@@ -1,72 +1,92 @@
-# Local Language Models - Project 1
+# Project 3: Web Scraping and Sentiment Analysis
 
-## Overview
-This project demonstrates the use of two local language models on my machine:
-Microsoft Phi-1.5: A generative language model that produces text continuations.
-OpenAI GPT-2: A transformer-based generative model used here to generate text based on prompts.
+# Overview
+This project combines **web scraping** and **local language model inference** to perform sentiment analysis on news headlines.
 
-The project reads three predefined prompts from a file (or hard-coded in the scripts), processes them through each model, and saves the outputs in separate text files.
+The project:
+- Reads scraped headlines from a file (output.txt generated in Project 2).
+- Uses a fine-tuned **GPT-2** model for sentiment analysis.
+- Outputs the predicted sentiments (Positive, Neutral, Negative) into a text file (project3_sentiments.txt).
 
-## Prerequisites
-## Prerequisites
+Additionally, two test cases are written using **pytest** to ensure:
+- The input file exists.
+- The input file contains data.
+
+# Prerequisites
 Before you begin, ensure you have the following installed:
 - **Python 3.8** (or compatible version)
 - **Conda** (Miniconda or Anaconda)
+- **PyTorch** and **transformers** libraries
+- **pytest** for running the test cases
 - A stable internet connection for the first run (to download model weights)
 
-## Setup Instructions
+Install the required libraries using:
 
-### 1. Clone the Repository
-Open your terminal or command prompt and run:
-<code>git clone https://github.com/yourusername/your-repo-name.git</code>
+pip install torch transformers pytest
 
-Then, navigate to the project directory:
-<code>cd your-repo-name</code>
+# Setup Instructions
 
-### 2. Create and Activate the Conda Environment
-Use the provided `requirements.yaml` file to set up the environment. Run:
-<code>conda env create -f requirements.yaml</code>
+## 1. Clone the Repository
+Open your terminal or command prompt and run:  
+git clone https://github.com/yourusername/your-repo-name.git
 
-Activate the environment:
-<code>conda activate cs_project1</code>
+Then, navigate to the project directory:  
+cd your-repo-name
 
-### 3. (Optional) Install Additional Dependencies
-All necessary packages are specified in the `requirements.yaml`. If you need to install any additional Python packages, you can use:
-<code>pip install package_name</code>
+## 2. Create and Activate the Conda Environment
+Use the provided requirements.yaml file to set up the environment. Run:  
+conda env create -f requirements.yaml
 
-## Running the Models
+Activate the environment:  
+conda activate cs_project1
 
-### 1. Run the Microsoft Phi-1.5 Model
-To execute the Phi-1.5 model script, run:
-<code>python phi_model.py</code>
+## 3. (Optional) Install Additional Dependencies
+All necessary packages are specified in the requirements.yaml. If you need to install any additional Python packages, you can use:  
+pip install package_name
 
-This script will:
-- Load the Phi-1.5 model and tokenizer.
-- Process three predefined prompts.
-- Save the generated text responses in `phi_responses.txt`.
-- Save the sentiments text responses in `sentiment_summary.txt`.
+# Project Structure
+project3/  
+├── project3_main.py         # Main script to perform sentiment analysis  
+├── base_model.py            # Base model class (for consistency)  
+├── gpt2_model.py            # Fine-tuned GPT-2 sentiment analysis model  
+├── phi_model.py             # (Optional) Phi-1.5 model (not used in this project)  
+├── web_scraper.py           # (Optional) Web scraping script (Project 2)  
+├── input.txt               # Input headlines file (from Project 2)  
+├── project3_sentiments.txt  # Output sentiments  
+├── test_project3.py         # Pytest test cases 
+├── p1input.txt             # project 1 input
+└── README.md                # This file  
 
-### 2. Run OpenAI GPT-2 Model
-To run the GPT-2 model script, execute:python gpt2_model.py
-- This script will:
-- Load the GPT-2 model and tokenizer.
-- Process the same three prompts.
-- Save the generated text responses in `gpt2_responses.txt`.
+# How to Run
+1. Ensure you have the output.txt file in the same directory. This file should contain the scraped headlines from Project 2.
 
-## File Structure
-- **phi_model.py:** Python script to load and run the Microsoft Phi-1.5 model.
-- **gpt2_model.py:**  Python script to load and run the OpenAI GPT-2 model.
-- **phi_responses.txt:** Output file containing the generated responses from Phi-1.5.
-- **sentiment_summary.txt:** Output file containing the the only sentiments from Phi-1.5.
-- **gpt2_responses.txt:** Output file containing the generated responses from GPT-2.
-- **gpt2_sentiment_summary.txt:** Output file containing the only sentiments from GPT-2.
-- **requirements.yaml:** Conda environment file for setting up the necessary dependencies.
-- **README.md:** This documentation file.
+2. Run the main script:
 
-## Additional Notes
-- **Model Downloads:** The first time you run the scripts, the models will be downloaded from Hugging Face. This may take a few minutes depending on your internet speed.
-- **Hardware Compatibility:** The scripts are configured to use a GPU if available; otherwise, they will run on the CPU.
-- **Troubleshooting:** If you encounter issues, verify that your conda environment is active and all dependencies are installed correctly.
-- **Further Reading:** For more details on the models and libraries, please refer to the [Transformers documentation](https://huggingface.co/transformers/) and [PyTorch documentation](https://pytorch.org/).
+python project3_main.py
 
-## All the best! 
+You should see the following message:
+
+✅ Project 3 sentiment analysis completed. Check project3_sentiments.txt
+
+The predicted sentiments will be saved in project3_sentiments.txt.
+
+# Test Cases
+Two test cases are included in test_sentiment_analysis.py:
+
+1. Test if input.txt exists  
+2. Test if input.txt contains data (is not empty)
+
+To run the tests, use:
+
+pytest test_sentiment_analysis.py
+
+Expected(not exact) output if both tests pass:
+
+============================= test session starts =============================  
+collected 2 items
+
+test_sentiment_analysis.py ..                                                           [100%]
+
+============================== 2 passed in Xs ================================
+
+# All the best!
