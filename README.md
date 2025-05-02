@@ -53,7 +53,7 @@ project3/
 ├── web_scraper.py           # (Optional) Web scraping script (Project 2)  
 ├── input.txt               # Input headlines file (from Project 2)  
 ├── project3_sentiments.txt  # Output sentiments  
-├── test_project3.py         # Pytest test cases 
+├── test_project3.py         # Pytest test cases  
 └── README.md                # This file  
 
 # How to Run
